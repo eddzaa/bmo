@@ -15,42 +15,7 @@ The Application Engineering team has been developing a custom WooCommerce-based 
 
 ### Solution Architect Diagram
 
-![Three-tier Application Solution Architect Diagram]
-
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                                     AWS Cloud                                │
-│                                                                              │
-│    ┌───────────────────────────────────────────────────────────────────────┐ │
-│    │                               VPC (10.0.0.0/16)                       │ │
-│    │                                                                       │ │
-│    │    ┌───────────────────────────┐   ┌───────────────────────────┐      │ │
-│    │    │   Public Subnet           │   │    Public Subnet          │      │ │
-│    │    │        (10.0.8.0/24)      │   │      (10.0.9.0/24)        │      │ │
-│    │    │                           │   │                           │      │ │
-│    │    └───────────┬───────────────┘   └───────────┬───────────────┘      │ │
-│    │                │                               │                      │ │
-│    │                │                               │                      │ │
-│    │     ┌──────────┴──────────┐                    │                      │ │
-│    │     │  Web Load Balancer  │                    │                      │ │
-│    │     └──────────┬──────────┘                    │                      │ │
-│    │                │                               │                      │ │
-│    │                │                               │                      │ │
-│    │    ┌──────────┴──────────┐                     │                      │ │
-│    │    │   Auto Scaling Group│                     │                      │ │
-│    │    │       (Web Tier)    │                     │                      │ │
-│    │    └──────────┬──────────┘                     │                      │ │
-│    │               │                                │                      │ │
-│    │               │                                │                      │ │
-│    │   ┌───────────┴───────────┐    ┌───────────────┴───────┐              │ │
-│    │   │   Private Subnet      │    │   Private Subnet      │              │ │
-│    │   │   (10.0.11.0/24)      │    │     (10.0.12.0/24)    │              │ │
-│    │   │        ┌──────────────┘    └──────────────┐        │              │ │
-│    │   │        │                                  │        │              │ │
-│    │   │        └──────────────────────────────────┘        │              │ │
-│    │   │                   Database Instance                │              │ │
-│    │   └────────────────────────────────────────────────────┘              │ │
-│    └───────────────────────────────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────────────────────────────────┘
+![Three-tier Application Solution Architect Diagram]:<img src="https://github.com/eddzaa/eddzaa/bmo/solution architect diagram.png">
 
 This architecture follows a three-tier web application pattern with separation of concerns:
 
@@ -78,26 +43,6 @@ The web servers are launched in the public subnets and can receive traffic from 
 
 This architecture separates concerns and provides a modular structure for building and managing the application components.
 
-
-#### Directory Structure:
-
-Presentation Layer (Tier 1)
-├── compute
-│ ├── main.tf
-│ ├── output.tf
-│ └── variables.tf
-
-Application Layer (Tier 2)
-├── database
-│ ├── main.tf
-│ ├── output.tf
-│ └── variables.tf
-
-Data Layer (Tier 3)
-├── networking
-│ ├── main.tf
-│ ├── output.tf
-│ └── variables.tf
 
 Thank you for considering my submission for the cloud-based infrastructure exercise. I have implemented a three-tier application architecture using modern Infrastructure as Code (IaC) techniques, leveraging AWS resources. The provided solution architect diagram and directory structure demonstrate the modularity and scalability of the infrastructure design.
 
