@@ -15,7 +15,7 @@ The Application Engineering team has been developing a custom WooCommerce-based 
 
 ### Solution Architect Diagram
 
-![Three-tier Application Solution Architect Diagram]:<img src="https://github.com/eddzaa/eddzaa/bmo/solution architect diagram.png">
+![Three-tier Application Solution Architect Diagram]:<img src="https://github.com/eddzaa/bmo/blob/main/solution%20architect%20diagram.png">
 
 This architecture follows a three-tier web application pattern with separation of concerns:
 
