@@ -49,7 +49,3 @@ Thank you for considering my submission for the cloud-based infrastructure exerc
 I am excited about the opportunity to discuss my implementation further in the upcoming interview sessions. Please feel free to reach out if you have any questions or need further clarification on any aspect of the solution.
 
 
-
-
-
-
